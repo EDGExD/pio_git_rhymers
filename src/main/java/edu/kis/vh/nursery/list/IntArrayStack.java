@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery.list;
 
-import edu.kis.vh.nursery.list.Contener;
-
 public class IntArrayStack implements Contener{
     
     private int[] NUMBERS = new int[12];
@@ -15,7 +13,7 @@ public class IntArrayStack implements Contener{
     }
 
     public boolean callCheck() {
-        return total == -1;
+        return total == MinusOne;
     }
 
     @Override
@@ -25,14 +23,14 @@ public class IntArrayStack implements Contener{
 
     public int peekaboo() {
         if (callCheck()) {
-            return -1;
+            return Zero;
         }
         return NUMBERS[total];
     }
 
     public int countOut() {
         if (callCheck()) {
-            return -1;
+            return Zero;
         }
         return NUMBERS[total--];
     }

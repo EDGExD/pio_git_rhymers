@@ -28,7 +28,7 @@ public class IntLinkedList implements Contener {
 
     public int top() {
         if (isEmpty()) {
-            return -1;
+            return MinusOne;
         }
         return last.value;
     }
@@ -36,7 +36,7 @@ public class IntLinkedList implements Contener {
 
     public int pop() {
         if (isEmpty()) {
-            return -1;
+            return MinusOne;
         }
         int ret = last.value;
         last = last.prev;
