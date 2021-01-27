@@ -8,5 +8,9 @@ public interface Contener {
     public static int Zero = 0;
     
     boolean isFull();
+    boolean isEmpty();   
+    void push(int in);
+    public int top();
+    public int pop();
  
 }

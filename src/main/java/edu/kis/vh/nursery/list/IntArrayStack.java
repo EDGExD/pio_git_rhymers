@@ -6,13 +6,15 @@ public class IntArrayStack implements Contener{
     
     public int total = -1;
 
-    public void countIn(int in) {
+    @Override
+    public void push(int in) {
         if (!isFull()) {
             NUMBERS[++total] = in;
         }
     }
 
-    public boolean callCheck() {
+    @Override
+    public boolean isEmpty() {
         return total == MinusOne;
     }
 
@@ -21,15 +23,17 @@ public class IntArrayStack implements Contener{
         return total == 11;
     }
 
-    public int peekaboo() {
-        if (callCheck()) {
+    @Override
+    public int top() {
+        if (isEmpty()) {
             return Zero;
         }
         return NUMBERS[total];
     }
 
-    public int countOut() {
-        if (callCheck()) {
+    @Override
+    public int pop() {
+        if (isEmpty()) {
             return Zero;
         }
         return NUMBERS[total--];

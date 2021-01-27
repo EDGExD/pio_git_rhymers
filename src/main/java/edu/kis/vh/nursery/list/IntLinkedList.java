@@ -6,6 +6,7 @@ public class IntLinkedList implements Contener {
     int i;
 
 
+    @Override
     public void push(int i) {
         if (last == null) {
             last = new Node(i);
@@ -17,6 +18,7 @@ public class IntLinkedList implements Contener {
     }
 
 
+    @Override
     public boolean isEmpty() {
         return last == null;
     }
@@ -26,6 +28,7 @@ public class IntLinkedList implements Contener {
         return false;
     }
 
+    @Override
     public int top() {
         if (isEmpty()) {
             return MinusOne;
@@ -34,6 +37,7 @@ public class IntLinkedList implements Contener {
     }
 
 
+    @Override
     public int pop() {
         if (isEmpty()) {
             return MinusOne;
